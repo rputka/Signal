@@ -1,0 +1,44 @@
+[
+    {
+      "product": "Atlas",
+      "region": "Midwest",
+      "revenue": 184000,
+      "unitsSold": 920,
+      "customerRating": 4.6
+    },
+    {
+      "product": "Beacon",
+      "region": "West",
+      "revenue": 142500,
+      "unitsSold": 710,
+      "customerRating": 4.2
+    },
+    {
+      "product": "Cobalt",
+      "region": "Northeast",
+      "revenue": 216000,
+      "unitsSold": 1080,
+      "customerRating": 4.8
+    },
+    {
+      "product": "Drift",
+      "region": "South",
+      "revenue": 128000,
+      "unitsSold": 640,
+      "customerRating": 4.1
+    },
+    {
+      "product": "Ember",
+      "region": "Midwest",
+      "revenue": 197500,
+      "unitsSold": 875,
+      "customerRating": 4.7
+    },
+    {
+      "product": "Field",
+      "region": "West",
+      "revenue": 159000,
+      "unitsSold": 795,
+      "customerRating": 4.4
+    }
+  ]
