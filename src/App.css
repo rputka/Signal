@@ -63,14 +63,63 @@ button {
   padding: 46px 0 80px;
 }
 
+/* Navigation (shared across every route) */
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-bottom: 22px;
+  padding: 14px 18px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-link {
+  padding: 8px 12px;
+
+  border-radius: var(--radius-small);
+
+  color: var(--text-soft);
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--text);
+  background: var(--surface-soft);
+}
+
+.nav-link.active {
+  color: var(--text);
+  background: var(--background);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
 /* Header */
 
 .dashboard-header {
-  min-height: 420px;
+  min-height: 340px;
 
   display: grid;
-  grid-template-columns: 180px 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
 
   padding: 28px 32px;
 
@@ -123,7 +172,7 @@ button {
 
   max-width: 760px;
 
-  padding: 58px 0 42px;
+  padding: 40px 0 34px;
 }
 
 .eyebrow {
@@ -470,6 +519,195 @@ tbody tr:hover {
   background: #fafafa;
 }
 
+/* Analysis result stats */
+
+.result-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+
+  margin: 14px 0 0;
+}
+
+.result-stats div {
+  padding: 10px 12px;
+
+  background: var(--surface);
+
+  border: 1px solid #ccd4ff;
+  border-radius: var(--radius-small);
+}
+
+.result-stats dt {
+  color: var(--text-soft);
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.result-stats dd {
+  margin: 4px 0 0;
+
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Dataset list */
+
+.dataset-section,
+.content-page {
+  margin-top: 22px;
+
+  padding: 30px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.dataset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.dataset-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+
+  background: var(--surface-soft);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-small);
+
+  color: inherit;
+  text-decoration: none;
+
+  transition: border-color 0.15s ease;
+}
+
+.dataset-card:hover {
+  border-color: var(--accent);
+}
+
+.dataset-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dataset-card-arrow {
+  color: var(--text-faint);
+}
+
+.dataset-card:hover .dataset-card-arrow {
+  color: var(--accent);
+}
+
+.dataset-card h3 {
+  margin: 14px 0 8px;
+
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.dataset-card p {
+  margin: 0;
+
+  color: var(--text-soft);
+
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.dataset-card-meta {
+  display: flex;
+  gap: 16px;
+
+  margin-top: 18px;
+  padding-top: 14px;
+
+  border-top: 1px solid var(--border);
+
+  color: var(--text-soft);
+
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.secondary-button {
+  align-self: flex-end;
+
+  padding: 10px 14px;
+
+  background: var(--surface);
+  color: var(--text);
+
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-small);
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.secondary-button:hover {
+  border-color: var(--text);
+}
+
+.secondary-button:disabled,
+select:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.empty-state {
+  margin: 0 0 4px;
+
+  color: var(--text-soft);
+
+  font-size: 14px;
+}
+
+/* Simple text pages (About, 404) */
+
+.content-page {
+  max-width: 760px;
+}
+
+.content-page h1 {
+  margin: 0 0 20px;
+
+  font-size: 44px;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.content-page h2 {
+  margin: 28px 0 10px;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content-page p,
+.content-page li {
+  color: var(--text-soft);
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.content-page a,
+.error-message a {
+  color: var(--accent);
+}
+
 /* Loading and errors */
 
 .status-message,
@@ -516,7 +754,7 @@ tbody tr:hover {
   }
 
   .header-copy {
-    padding: 60px 0;
+    padding: 36px 0;
   }
 
   .header-copy h1 {
@@ -547,5 +785,13 @@ tbody tr:hover {
 
   .analyze-button {
     width: 100%;
+  }
+
+  .result-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .secondary-button {
+    align-self: flex-start;
   }
 }

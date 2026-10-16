@@ -1,0 +1,142 @@
+{
+  "name": "Finance Market Sample",
+  "description": "Illustrative daily price data (not real market quotes) used to demonstrate Signal's dataset-analysis features.",
+  "fileName": "finance_sample.json",
+  "rows": [
+    {
+      "date": "2026-01-05",
+      "ticker": "AAPL",
+      "open": 242.1,
+      "high": 242.95,
+      "low": 238.34,
+      "close": 240.39,
+      "volume": 39964623
+    },
+    {
+      "date": "2026-01-06",
+      "ticker": "AAPL",
+      "open": 240.39,
+      "high": 242.1,
+      "low": 239.77,
+      "close": 240.74,
+      "volume": 49360611
+    },
+    {
+      "date": "2026-01-07",
+      "ticker": "AAPL",
+      "open": 240.74,
+      "high": 242.27,
+      "low": 235.65,
+      "close": 236.29,
+      "volume": 40359401
+    },
+    {
+      "date": "2026-01-08",
+      "ticker": "AAPL",
+      "open": 236.29,
+      "high": 238.72,
+      "low": 234.82,
+      "close": 235.58,
+      "volume": 43221961
+    },
+    {
+      "date": "2026-01-09",
+      "ticker": "AAPL",
+      "open": 235.58,
+      "high": 239.5,
+      "low": 233.75,
+      "close": 236.78,
+      "volume": 46968298
+    },
+    {
+      "date": "2026-01-05",
+      "ticker": "MSFT",
+      "open": 431.5,
+      "high": 440.8,
+      "low": 426.93,
+      "close": 439.72,
+      "volume": 19536807
+    },
+    {
+      "date": "2026-01-06",
+      "ticker": "MSFT",
+      "open": 439.72,
+      "high": 441.12,
+      "low": 431.26,
+      "close": 433.46,
+      "volume": 24512394
+    },
+    {
+      "date": "2026-01-07",
+      "ticker": "MSFT",
+      "open": 433.46,
+      "high": 436.85,
+      "low": 424.33,
+      "close": 427.92,
+      "volume": 20319156
+    },
+    {
+      "date": "2026-01-08",
+      "ticker": "MSFT",
+      "open": 427.92,
+      "high": 429.87,
+      "low": 426.81,
+      "close": 428.74,
+      "volume": 18746309
+    },
+    {
+      "date": "2026-01-09",
+      "ticker": "MSFT",
+      "open": 428.74,
+      "high": 434.54,
+      "low": 426.54,
+      "close": 431.83,
+      "volume": 22333559
+    },
+    {
+      "date": "2026-01-05",
+      "ticker": "NVDA",
+      "open": 138.2,
+      "high": 138.89,
+      "low": 136.57,
+      "close": 137.94,
+      "volume": 236284068
+    },
+    {
+      "date": "2026-01-06",
+      "ticker": "NVDA",
+      "open": 137.94,
+      "high": 139.01,
+      "low": 135.54,
+      "close": 136.53,
+      "volume": 253088117
+    },
+    {
+      "date": "2026-01-07",
+      "ticker": "NVDA",
+      "open": 136.53,
+      "high": 138.45,
+      "low": 134.92,
+      "close": 137.78,
+      "volume": 180863475
+    },
+    {
+      "date": "2026-01-08",
+      "ticker": "NVDA",
+      "open": 137.78,
+      "high": 139.1,
+      "low": 136.85,
+      "close": 137.33,
+      "volume": 216247079
+    },
+    {
+      "date": "2026-01-09",
+      "ticker": "NVDA",
+      "open": 137.33,
+      "high": 138.52,
+      "low": 133.5,
+      "close": 134.8,
+      "volume": 224266674
+    }
+  ]
+}
