@@ -86,3 +86,7 @@ All Parse queries live in `src/models`. Pages call model functions inside `useEf
 - More analysis methods (correlation, grouping)
 - Charts and visualizations
 - AI-assisted dataset questions and analysis
+
+## GitHub Link
+
+- https://github.com/rputka/Signal
