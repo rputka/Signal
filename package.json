@@ -1,7 +1,7 @@
 {
-  "name": "my-react-app",
+  "name": "signal",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "events": "^3.3.0",
     "parse": "^8.6.2",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
