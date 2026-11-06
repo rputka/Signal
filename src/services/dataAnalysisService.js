@@ -1,11 +1,3 @@
-/*
- * Pure, dataset-agnostic analysis helpers.
- *
- * These functions only take plain arrays of row objects and never talk to
- * Parse, so they work for any structured dataset. Database access lives in
- * src/models; this file is only math and column inspection.
- */
-
 // Returns every column name that appears in the dataset, in first-seen order.
 export function getColumns(rows) {
   const columns = [];
@@ -21,8 +13,6 @@ export function getColumns(rows) {
   return columns;
 }
 
-// Labels each column "number" or "string" by checking every non-empty value,
-// not just the first row, so one odd row cannot mislabel a column.
 export function getColumnTypes(rows) {
   const types = {};
 
@@ -102,6 +92,3 @@ export function formatColumnName(column) {
 export function formatNumber(value) {
   return value.toLocaleString(undefined, { maximumFractionDigits: 2 });
 }
-
-// TODO (future work): correlation between two numeric columns, grouping by a
-// text column, and CSV parsing for user uploads.

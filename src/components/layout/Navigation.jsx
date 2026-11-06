@@ -1,8 +1,16 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
-// Persistent top bar rendered on every route. NavLink adds an "active"
-// class to the link for the current page.
+import { logout } from "../../services/AuthService";
+
+// Top bar rendered on every protected route.
 export function Navigation() {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await logout();
+    navigate("/login");
+  };
+
   return (
     <nav className="site-nav">
       <Link to="/" className="brand-lockup">
@@ -22,6 +30,10 @@ export function Navigation() {
         <NavLink to="/about" className="nav-link">
           About
         </NavLink>
+
+        <button type="button" className="secondary-button" onClick={handleLogout}>
+          Log out
+        </button>
       </div>
     </nav>
   );

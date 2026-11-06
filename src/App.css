@@ -708,6 +708,76 @@ select:disabled {
   color: var(--accent);
 }
 
+/* Login and registration */
+
+.auth-page {
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  padding: 24px;
+}
+
+.auth-card {
+  width: min(400px, 100%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  padding: 30px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.auth-form h1 {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.auth-form .error-message {
+  margin-top: 0;
+}
+
+.auth-submit {
+  padding: 12px 15px;
+
+  background: var(--text);
+  color: white;
+
+  border: 1px solid var(--text);
+  border-radius: var(--radius-small);
+}
+
+.auth-submit:hover {
+  background: #303030;
+}
+
+.auth-switch {
+  color: var(--accent);
+
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.auth-switch:hover {
+  text-decoration: underline;
+}
+
 /* Loading and errors */
 
 .status-message,

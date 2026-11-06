@@ -16,8 +16,6 @@ export default function DatasetListPage() {
   const [error, setError] = useState("");
   const [isSeeding, setIsSeeding] = useState(false);
 
-  // Loads datasets asynchronously once, when the page first renders.
-  // The Parse query itself lives in DatasetModel; this page only awaits it.
   useEffect(() => {
     let ignore = false;
 
