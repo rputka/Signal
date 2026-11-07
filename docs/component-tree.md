@@ -1,4 +1,4 @@
-# Signal Component Tree (Feature 4)
+# Signal Component Tree (Feature 5)
 
 Arrows point from a parent to the children it renders. Pages are chosen by
 React Router based on the URL. Data flows **down** as props; user events flow
@@ -7,13 +7,17 @@ React Router based on the URL. Data flows **down** as props; user events flow
 ```mermaid
 flowchart TD
   main["main.jsx<br/>createRoot + BrowserRouter"] --> App
-  App --> Navigation
   App --> Routes["Routes"]
 
-  Routes -->|"/"| DatasetListPage
-  Routes -->|"/datasets/:datasetId"| DatasetAnalysisPage
-  Routes -->|"/about"| AboutPage
-  Routes -->|"*"| NotFoundPage
+  Routes -->|"/login"| PublicLogin["PublicRoute"] --> AuthLogin --> AF1["AuthForm"]
+  Routes -->|"/register"| PublicRegister["PublicRoute"] --> AuthRegister --> AF2["AuthForm"]
+
+  Routes --> ProtectedRoute --> AppLayout
+  AppLayout --> Navigation
+  AppLayout -->|"/"| DatasetListPage
+  AppLayout -->|"/datasets/:datasetId"| DatasetAnalysisPage
+  AppLayout -->|"/about"| AboutPage
+  AppLayout -->|"*"| NotFoundPage
 
   DatasetListPage --> H1["DashboardHeader"]
   DatasetListPage --> S1["StatusMessage"]

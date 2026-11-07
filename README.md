@@ -35,12 +35,14 @@ Routing is initialized in `src/main.jsx` (`BrowserRouter`) and defined in `src/A
 
 | Path | Page | Purpose |
 |---|---|---|
+| `/login` | `AuthLogin` | Login form (public only) |
+| `/register` | `AuthRegister` | Registration form (public only) |
 | `/` | `DatasetListPage` | Lists all Datasets from Parse; seeds the sample dataset |
 | `/datasets/:datasetId` | `DatasetAnalysisPage` | Loads one Dataset and its DataRecords; analysis UI |
 | `/about` | `AboutPage` | Project and team info |
 | `*` | `NotFoundPage` | Fallback for unknown URLs |
 
-`DatasetCard` links route from `/` to `/datasets/:datasetId`; the navigation bar links to `/` and `/about`.
+`DatasetCard` links route from `/` to `/datasets/:datasetId`; the navigation bar links to `/` and `/about`. Every route except `/login` and `/register` is wrapped in `ProtectedRoute`, which redirects logged-out visitors to `/login`, including when a protected URL is typed directly into the address bar. `/login` and `/register` are wrapped in `PublicRoute`, which sends an already logged-in user to `/`. Register, login, logout and the current user all live in `src/services/AuthService.js`.
 
 ### Data Model
 

@@ -2,6 +2,21 @@
 
 All notable changes to Signal are documented here. This project follows [Semantic Versioning](https://semver.org/).
 
+## [0.3.0] - 2026-11-06
+
+### Added
+- Parse user registration, login and logout in a separate service (`src/services/AuthService.js`)
+- `AuthLogin` and `AuthRegister` pages built on a shared `AuthForm` component
+- `ProtectedRoute`: every page except `/login` and `/register` requires a logged-in user; logged-out visitors, including ones typing a protected URL, are redirected to `/login`
+- `PublicRoute`: logged-in users who open `/login` or `/register` are redirected to `/`
+- Log out button in the navigation bar
+- Submit button is disabled while a login or registration request is running
+
+### Changed
+- Protected pages share an `AppLayout` route (navigation plus `Outlet`)
+- Unknown URLs show `NotFoundPage` inside the protected layout
+- Component tree diagram updated for the auth routes
+
 ## [0.2.0] - 2026-10-16
 
 ### Added
