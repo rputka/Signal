@@ -766,6 +766,11 @@ select:disabled {
   background: #303030;
 }
 
+.auth-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 .auth-switch {
   color: var(--accent);
 

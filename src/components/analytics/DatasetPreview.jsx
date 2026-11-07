@@ -1,5 +1,7 @@
 import { formatNumber } from "../../services/dataAnalysisService";
 
+// Renders a table of the dataset. Columns are passed in from the page, so the
+// table adapts to any structure instead of assuming specific fields.
 export function DatasetPreview({ rows, columns }) {
   if (rows.length === 0) {
     return null;

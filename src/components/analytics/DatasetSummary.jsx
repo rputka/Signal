@@ -1,3 +1,5 @@
+// Displays high-level structure of whatever dataset is loaded.
+// Field counts are derived from the data, never from a fixed schema.
 export function DatasetSummary({ rows, columns, numericColumns, description }) {
   return (
     <section className="summary-section">

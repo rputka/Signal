@@ -18,11 +18,15 @@ import { AnalysisQuestion } from "../components/analytics/AnalysisQuestion.jsx";
 import { DatasetPreview } from "../components/analytics/DatasetPreview.jsx";
 import { StatusMessage } from "../components/layout/StatusMessage.jsx";
 
+// Route "/datasets/:datasetId". Keying the inner view by the id gives each
+// dataset a fresh state, so moving between datasets never shows stale rows.
 export default function DatasetAnalysisPage() {
   const { datasetId } = useParams();
   return <DatasetAnalysisView key={datasetId} datasetId={datasetId} />;
 }
 
+// Stateful parent: loads one Dataset and its DataRecords from Parse, then
+// passes plain data down to the stateless analytics components.
 function DatasetAnalysisView({ datasetId }) {
   const [dataset, setDataset] = useState(null);
   const [rows, setRows] = useState([]);

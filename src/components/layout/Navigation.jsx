@@ -2,13 +2,18 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 
 import { logout } from "../../services/AuthService";
 
-// Top bar rendered on every protected route.
+// Persistent top bar rendered on every protected route. NavLink adds an
+// "active" class to the link for the current page.
 export function Navigation() {
   const navigate = useNavigate();
 
+  // Always leave for /login, even if the logout request itself fails.
   const handleLogout = async () => {
-    await logout();
-    navigate("/login");
+    try {
+      await logout();
+    } finally {
+      navigate("/login");
+    }
   };
 
   return (

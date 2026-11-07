@@ -1,3 +1,5 @@
+// Collects the user's question, triggers analysis, and shows the result.
+// It owns no state: every change is sent up to the parent page.
 export function AnalysisQuestion({ question, onQuestionChange, onAnalyze, result }) {
   return (
     <form className="analysis-form" onSubmit={onAnalyze}>

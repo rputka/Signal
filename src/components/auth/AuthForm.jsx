@@ -3,21 +3,26 @@ import { useNavigate } from "react-router-dom";
 
 import { StatusMessage } from "../layout/StatusMessage.jsx";
 
+// Shared email/password form for both login and registration. The page passes
+// in the AuthService call to run, so this component holds no auth logic.
 export default function AuthForm({ title, onSubmit, passwordAutoComplete }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
+    setIsSubmitting(true);
 
     try {
       await onSubmit(email, password);
       navigate("/");
     } catch (err) {
       setError(err.message);
+      setIsSubmitting(false);
     }
   };
 
@@ -49,8 +54,9 @@ export default function AuthForm({ title, onSubmit, passwordAutoComplete }) {
 
       {error && <StatusMessage type="error">{error}</StatusMessage>}
 
-      <button type="submit" className="auth-submit">
-        {title}
+      {/* Disabled while the request runs so a double click can't submit twice. */}
+      <button type="submit" className="auth-submit" disabled={isSubmitting}>
+        {isSubmitting ? "Please wait..." : title}
       </button>
     </form>
   );
